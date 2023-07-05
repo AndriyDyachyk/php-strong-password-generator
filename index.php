@@ -1,12 +1,9 @@
 <?php 
+    require __DIR__.'/functions.php';
 
-function generaPassword() {
-    echo(substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($_GET['passLength']/strlen($x)) )),1,$_GET['passLength']));
-}
-
-if(isset($_GET['passLength']) && $_GET['passLength'] !== ''){
-    generaPassword($_GET['passLength']);
-}
+    if(isset($_GET['passLength']) && $_GET['passLength'] !== ''){
+        generaPassword($_GET['passLength']);
+    }
 
 ?>
 
